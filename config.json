@@ -1,7 +1,7 @@
 {
   "params": {
-    "custom_avatar_url": "https://bothy.micro.blog/uploads/2025/bothy-logo.png",
-    "description": "A simple starter theme for Micro.blog",
+    "custom_avatar_url": "",
+    "description": "",
     "paginate": 10
   }
 }
