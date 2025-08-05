@@ -15,12 +15,7 @@
   --secondary-color: #666;
 
   --background-color: #fafafa;
-  --background-subtle: rgba(229, 231, 235, 0.3);
-
-  --border-light: #e5e7eb;
-  --border-medium: #d1d5db;
-
-  --shadow-light: rgba(75, 85, 99, 0.1);
+  --border-color: #bebebe;
   --shadow-medium: rgba(75, 85, 99, 0.2);
 }
 
@@ -70,7 +65,7 @@ main {
 
 footer {
   text-align: center;
-  color:
+  color: var(--secondary-color);
   font-size: 0.9rem;
 }
 
@@ -88,7 +83,7 @@ footer {
 .site-avatar {
   border-radius: 50%;
   border: 3px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-medium);
   flex-shrink: 0;
   height: 70px;
   object-fit: cover;
@@ -129,6 +124,7 @@ footer {
    NAVIGATION
    ============================ */
 nav {
+  font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: var(--spacing-xl);
 }
@@ -150,29 +146,24 @@ nav ul li {
 
 .nav-link {
   text-decoration: none;
-  color: inherit;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.underline-slide {
   color: var(--primary-color);
   font-weight: bold;
   padding: 0.5rem 0;
+  position: relative;
 }
 
-.underline-slide::after {
+.nav-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), );
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   transition: width 0.3s ease;
 }
 
-.underline-slide:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
@@ -180,7 +171,7 @@ nav ul li {
    POSTS & ARTICLES
    ============================ */
 .post {
-  border-bottom: 3px solid var(--border-light);
+  border-bottom: 3px solid var(--border-color);
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
 }
@@ -197,14 +188,13 @@ nav ul li {
 }
 
 .post-date {
-  color:
-  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
   font-weight: bold;
   position: relative;
   display: inline-block;
   padding-bottom: var(--spacing-xxs);
   margin-bottom: var(--spacing-xxs);
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -217,7 +207,7 @@ nav ul li {
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, var(--primary-color), );
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   transition: width 0.3s ease;
 }
 
@@ -326,10 +316,10 @@ blockquote {
   margin: var(--spacing-lg) 0;
   padding: var(--spacing-md);
   padding-left: var(--spacing-lg);
-  border-left: 4px solid #374151;
+  border-left: 4px solid var(--secondary-color);
   background: transparent;
   font-style: italic;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1.05em;
 }
 
@@ -337,11 +327,11 @@ blockquote {
    IMAGES & MEDIA
    ============================ */
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: var(--spacing-sm) 0;
-  border-radius: 3px;
-  border: var(--secondary-color) solid 3px;
+  border-radius: 4px;
+  border: var(--secondary-color) solid 4px;
 }
 
 /* ============================
@@ -378,7 +368,7 @@ pre code {
 .categories a {
   color: var(--secondary-color);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
@@ -406,14 +396,14 @@ pre code {
   color: var(--primary-color);
 }
 
-.content a {
+.post a {
   color: var(--secondary-color);
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
   transition: all 0.2s ease;
 }
 
-.content a:hover {
+.post a:hover {
   color: var(--primary-color);
   text-decoration-color: var(--primary-color);
 }

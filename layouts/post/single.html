@@ -4,7 +4,7 @@
     <header>
       <a href="{{ .Permalink }}" class="u-url">
         <time datetime='{{ .Date.Format "2006-01-02" }}' class="dt-published post-date">
-          {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+          {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
         </time>
       </a>
       {{ if .Title }}
@@ -20,9 +20,7 @@
       <a href="{{ .RelPermalink }}" class="category">{{ .LinkTitle }}</a>
       {{- end }}
     </aside>
-    {{- end }} {{- end }}
-
-    {{ if .Site.Params.include_conversation }}
+    {{- end }} {{- end }} {{ if .Site.Params.include_conversation }}
     <footer>
       <script
         type="text/javascript"
