@@ -466,6 +466,51 @@ nav ul li {
 }
 
 /* ============================
+   PAGINATION
+   ============================ */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  font-size: 1rem; /* Smaller than nav-link's 1.2rem */
+}
+
+.pagination .prev,
+.pagination .next {
+  margin: 0;
+}
+
+.pagination .next {
+  margin-left: auto;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 0.5rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.pagination a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.pagination a:hover::after {
+  width: 100%;
+}
+
+/* ============================
    POSTS & ARTICLES
    ============================ */
 .post {
