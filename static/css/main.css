@@ -298,11 +298,10 @@ footer a:hover {
    SITE HEADER
    ============================ */
 .header-content {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-  margin-top: var(--spacing-sm);
+  margin: var(--spacing-xxl) 0;
 }
 
 .site-avatar {
@@ -351,8 +350,7 @@ footer a:hover {
 .theme-toggle {
   margin-left: auto;
   display: flex;
-  align-items: flex-start;
-  margin-top: 2px;
+  align-items: center;
 }
 
 .theme-switch {
@@ -423,7 +421,7 @@ footer a:hover {
 .color-theme-switcher {
   margin-left: var(--spacing-sm);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .color-theme-button {
