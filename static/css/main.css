@@ -105,7 +105,7 @@
   --conversation-border: rgba(0, 0, 0, 0.05);
 }
 
-[data-theme="dark"],
+/* Auto dark mode - applies when system prefers dark and user hasn't set explicit preference */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     /* Dark theme colors */
@@ -244,38 +244,46 @@ footer {
   font-size: 0.9rem;
 }
 
-footer a {
+/* Footer and post links share the same theme-aware styling */
+footer a,
+.post a {
   color: var(--theme-color-light);
   text-decoration: underline;
   text-decoration-color: var(--theme-color-light);
   transition: all 0.2s ease;
 }
 
-footer a:hover {
+footer a:hover,
+.post a:hover {
   color: var(--theme-color-dark);
   text-decoration-color: var(--theme-color-dark);
 }
 
 /* Dark theme: use lighter color for normal, darker for hover */
-[data-theme="dark"] footer a {
+[data-theme="dark"] footer a,
+[data-theme="dark"] .post a {
   color: var(--theme-color-dark);
   text-decoration-color: var(--theme-color-dark);
 }
 
-[data-theme="dark"] footer a:hover {
+[data-theme="dark"] footer a:hover,
+[data-theme="dark"] .post a:hover {
   color: var(--theme-color-light);
   text-decoration-color: var(--theme-color-light);
 }
 
-/* Neutral theme contrast fixes for footer */
-[data-color-theme="neutral"] footer a:hover {
+/* Neutral theme contrast fixes */
+[data-color-theme="neutral"] footer a:hover,
+[data-color-theme="neutral"] .post a:hover {
   color: var(--theme-hover-light);
   text-decoration-color: var(--theme-hover-light);
 }
 
 [data-theme="dark"][data-color-theme="neutral"] footer a:hover,
+[data-theme="dark"][data-color-theme="neutral"] .post a:hover,
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"])[data-color-theme="neutral"] footer a:hover {
+  :root:not([data-theme="light"])[data-color-theme="neutral"] footer a:hover,
+  :root:not([data-theme="light"])[data-color-theme="neutral"] .post a:hover {
     color: var(--theme-hover-dark);
     text-decoration-color: var(--theme-hover-dark);
   }
@@ -283,12 +291,14 @@ footer a:hover {
 
 /* Auto dark mode support */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) footer a {
+  :root:not([data-theme="light"]) footer a,
+  :root:not([data-theme="light"]) .post a {
     color: var(--theme-color-dark);
     text-decoration-color: var(--theme-color-dark);
   }
 
-  :root:not([data-theme="light"]) footer a:hover {
+  :root:not([data-theme="light"]) footer a:hover,
+  :root:not([data-theme="light"]) .post a:hover {
     color: var(--theme-color-light);
     text-decoration-color: var(--theme-color-light);
   }
@@ -789,56 +799,7 @@ pre code {
   margin-top: var(--spacing-sm);
 }
 
-.post a {
-  color: var(--theme-color-light);
-  text-decoration: underline;
-  text-decoration-color: var(--theme-color-light);
-  transition: all 0.2s ease;
-}
-
-/* Light theme hover */
-.post a:hover {
-  color: var(--theme-color-dark);
-  text-decoration-color: var(--theme-color-dark);
-}
-
-/* Dark theme: use lighter color for normal, darker for hover */
-[data-theme="dark"] .post a {
-  color: var(--theme-color-dark);
-  text-decoration-color: var(--theme-color-dark);
-}
-
-[data-theme="dark"] .post a:hover {
-  color: var(--theme-color-light);
-  text-decoration-color: var(--theme-color-light);
-}
-
-/* Neutral theme contrast fixes */
-[data-color-theme="neutral"] .post a:hover {
-  color: var(--theme-hover-light);
-  text-decoration-color: var(--theme-hover-light);
-}
-
-[data-theme="dark"][data-color-theme="neutral"] .post a:hover,
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"])[data-color-theme="neutral"] .post a:hover {
-    color: var(--theme-hover-dark);
-    text-decoration-color: var(--theme-hover-dark);
-  }
-}
-
-/* Auto dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .post a {
-    color: var(--theme-color-dark);
-    text-decoration-color: var(--theme-color-dark);
-  }
-
-  :root:not([data-theme="light"]) .post a:hover {
-    color: var(--theme-color-light);
-    text-decoration-color: var(--theme-color-light);
-  }
-}
+/* Note: .post a styling is combined with footer a earlier in the file */
 
 .read-more:hover {
   color: var(--primary-hover);
