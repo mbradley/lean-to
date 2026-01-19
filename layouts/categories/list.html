@@ -7,7 +7,7 @@
   </header>
 
   {{ $paginator := .Paginate .Pages.ByDate.Reverse }} {{ range $paginator.Pages }}
-  <article class="h-entry post">
+  <article class="h-entry post{{ range .Params.categories }} cat-{{ . | urlize }}{{ end }}">
     <header class="post-header">
       <a href="{{ .Permalink }}" class="u-url">
         <time datetime='{{ .Date.Format "2006-01-02" }}' class="dt-published post-date">

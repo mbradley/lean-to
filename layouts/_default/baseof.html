@@ -4,7 +4,12 @@
   <body>
     <div class="wrapper">
       {{ partial "header.html" . }}
-      {{ block "main" . }} {{ end }}
+      <div class="content-wrapper">
+        <div class="content-main">
+          {{ block "main" . }} {{ end }}
+        </div>
+        {{ partial "sidebar.html" . }}
+      </div>
       {{ partial "footer.html" . }}
       {{ partial "custom_footer.html" . }}
     </div>

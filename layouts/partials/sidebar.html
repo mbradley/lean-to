@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <section class="sidebar-section">
+    <h3>Categories</h3>
+    <ul class="category-list">
+      {{ range .Site.Taxonomies.categories }}
+      <li>
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        <span class="count">({{ .Count }})</span>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="sidebar-section">
+    <h3>Regular Reads</h3>
+    <ul class="blogroll">
+      {{ range .Site.Data.blogroll }}
+      <li>
+        <a href="{{ .url }}" rel="external">{{ .name }}</a>
+        {{ with .description }}<span class="description">— {{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</aside>
