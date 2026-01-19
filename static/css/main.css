@@ -45,6 +45,10 @@
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
 
+  /* Theme accent colors (burnt orange) */
+  --theme-color-light: #b35a00;
+  --theme-color-dark: #e07020;
+
   /* Light theme colors */
   --primary-color: #333;
   --secondary-color: #666;
