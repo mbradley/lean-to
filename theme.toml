@@ -1,0 +1,19 @@
+name = "Lean-to"
+license = "MIT"
+licenselink = "https://github.com/mbradley/lean-to/blob/main/LICENSE"
+description = "A lean, two-column Micro.blog theme derived from Bothy."
+homepage = "https://github.com/mbradley/lean-to"
+demosite = "https://machination.org"
+min_version = "0.91.0"
+tags = ["blog", "minimal", "two-column", "microblog"]
+features = ["blog"]
+
+[author]
+  name = "Matthew Bradley"
+  homepage = "https://machination.org"
+
+# Derived from Bothy (MIT) by Matthew Lang, and theme-blank (MIT) by Micro.blog.
+[original]
+  name = "Bothy"
+  homepage = "https://github.com/matthewl/bothy"
+  repo = "https://github.com/matthewl/bothy"
