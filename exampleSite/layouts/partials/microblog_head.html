@@ -1,0 +1,7 @@
+{{/*
+  Standalone-preview stub for the base partial Micro.blog's theme-blank injects.
+  Lives under exampleSite/ ONLY — never add this to the theme's own layouts/, or it
+  would shadow Micro.blog's real microblog_head.html in production.
+*/}}
+<meta charset="utf-8">
+<title>{{ if and .Title (not .IsHome) }}{{ .Title }} &ndash; {{ end }}{{ .Site.Title }}</title>
