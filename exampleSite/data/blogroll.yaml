@@ -1,0 +1,16 @@
+# "Regular Reads" — rendered in the sidebar by partials/sidebar.html
+- name: Robot Wisdom
+  url: http://www.robotwisdom.com/
+  description: Jorn Barger's pioneering weblog
+
+- name: Daring Fireball
+  url: https://daringfireball.net/
+  description: John Gruber on Apple and technology
+
+- name: Go Make Things
+  url: https://gomakethings.com/
+  description: Chris Ferdinandi on lean, vanilla web development
+
+- name: kottke.org
+  url: https://kottke.org/
+  description: Jason Kottke's long-running linklog

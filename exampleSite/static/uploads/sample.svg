@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Placeholder landscape image">
+  <rect width="800" height="500" fill="#e7e2d8"/>
+  <rect y="360" width="800" height="140" fill="#cdbfa3"/>
+  <circle cx="640" cy="110" r="48" fill="#d98a3d"/>
+  <polygon points="0,360 230,210 430,360" fill="#b7a98c"/>
+  <polygon points="300,360 540,180 800,360" fill="#a89a7c"/>
+  <text x="400" y="470" font-family="Georgia, serif" font-size="28" fill="#5b513f" text-anchor="middle">sample photo</text>
+</svg>
