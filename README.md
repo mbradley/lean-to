@@ -20,6 +20,19 @@ Built on Bothy's foundation, Lean-to adds:
 
 Place in your `themes/` directory and configure in Hugo or select via Micro.blog.
 
+## Local development
+
+Micro.blog builds with **Hugo 0.91** — develop and preview against that version (newer
+template syntax can break the live build). A bundled `exampleSite/` lets you preview
+the theme standalone:
+
+```bash
+./preview.sh        # → http://localhost:1313/  (uses Docker + Hugo 0.91)
+```
+
+See [`CLAUDE.md`](CLAUDE.md) for the template map, design conventions, the Hugo 0.91
+syntax constraints, and the deploy/reload loop.
+
 ### Blogroll
 
 Create `data/blogroll.yaml`:
