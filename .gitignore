@@ -1,0 +1,8 @@
+# Hugo build artifacts from exampleSite preview
+exampleSite/public/
+exampleSite/resources/
+exampleSite/_preview_public/
+.hugo_build.lock
+
+# OS files
+.DS_Store
