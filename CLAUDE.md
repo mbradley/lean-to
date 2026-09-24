@@ -63,7 +63,8 @@ Micro.blog injects base/plugin partials its `theme-blank` provides. This theme c
 ⚠️ Do **not** add `microblog_head.html` / `custom_footer.html` to this theme's
 `layouts/` — an in-theme copy would shadow Micro.blog's real one in production. For
 standalone preview they are stubbed under **`exampleSite/layouts/partials/`** instead,
-which Micro.blog ignores (it uses the repo as a theme and skips `exampleSite/`).
+which Hugo never reads when this repo is used as a theme (verified 2026-09-24: the
+real-site build at 0.91 is byte-identical with and without `exampleSite/`).
 
 ## Design conventions
 
